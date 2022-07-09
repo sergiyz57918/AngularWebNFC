@@ -1,0 +1,13 @@
+<h1>WebUSB demo</h1>
+<h2>{{webusbSerivce.getDeviceName()}}</h2>
+<button (click)="connect()">Connect device</button>
+<button (click)="disconnect()">Disconect device</button>
+
+
+<div ng-show="webusbSerivce.getIsConnected()===false">
+	<div >Please connect your device</div>
+	<router-outlet></router-outlet>
+</div>
+<div>
+  <button (click)="readTag()">Read tag</button>
+  <p>TAG:{{tag}}</p></div>
